@@ -11,12 +11,12 @@ namespace PrimeiroProjeto
         static void Main(string[] args)
         {
             NewMethod();
-
         }
 
         private static void NewMethod()
         {
-            Console.Write("Olá Mundo");
+            Console.WriteLine("My first program");
+            Console.WriteLine("That is a application Console");
         }
     }
 }
