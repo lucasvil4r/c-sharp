@@ -35,11 +35,11 @@
             this.LabelData = new System.Windows.Forms.Label();
             this.dateTime = new System.Windows.Forms.DateTimePicker();
             this.ConfirmarButton = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.groupBox1.SuspendLayout();
+            this.GrupoPeriodo = new System.Windows.Forms.GroupBox();
+            this.RadioManha = new System.Windows.Forms.RadioButton();
+            this.RadioTarde = new System.Windows.Forms.RadioButton();
+            this.RadioNoite = new System.Windows.Forms.RadioButton();
+            this.GrupoPeriodo.SuspendLayout();
             this.SuspendLayout();
             // 
             // LabelNome
@@ -106,58 +106,58 @@
             this.ConfirmarButton.UseVisualStyleBackColor = true;
             this.ConfirmarButton.Click += new System.EventHandler(this.ConfirmarButton_Click);
             // 
-            // groupBox1
+            // GrupoPeriodo
             // 
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(90, 161);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(433, 51);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.GrupoPeriodo.Controls.Add(this.RadioManha);
+            this.GrupoPeriodo.Controls.Add(this.RadioTarde);
+            this.GrupoPeriodo.Controls.Add(this.RadioNoite);
+            this.GrupoPeriodo.Location = new System.Drawing.Point(90, 161);
+            this.GrupoPeriodo.Name = "GrupoPeriodo";
+            this.GrupoPeriodo.Size = new System.Drawing.Size(433, 56);
+            this.GrupoPeriodo.TabIndex = 4;
+            this.GrupoPeriodo.TabStop = false;
+            this.GrupoPeriodo.Text = "Periodo";
             // 
-            // radioButton2
+            // RadioManha
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(161, 22);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(94, 19);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.RadioManha.AutoSize = true;
+            this.RadioManha.Location = new System.Drawing.Point(318, 22);
+            this.RadioManha.Name = "RadioManha";
+            this.RadioManha.Size = new System.Drawing.Size(62, 19);
+            this.RadioManha.TabIndex = 2;
+            this.RadioManha.TabStop = true;
+            this.RadioManha.Text = "Manhã";
+            this.RadioManha.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // RadioTarde
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(18, 22);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(94, 19);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RadioTarde.AutoSize = true;
+            this.RadioTarde.Location = new System.Drawing.Point(161, 22);
+            this.RadioTarde.Name = "RadioTarde";
+            this.RadioTarde.Size = new System.Drawing.Size(53, 19);
+            this.RadioTarde.TabIndex = 1;
+            this.RadioTarde.TabStop = true;
+            this.RadioTarde.Text = "Tarde";
+            this.RadioTarde.UseVisualStyleBackColor = true;
+            this.RadioTarde.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // radioButton3
+            // RadioNoite
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(318, 22);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(94, 19);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.RadioNoite.AutoSize = true;
+            this.RadioNoite.Location = new System.Drawing.Point(18, 22);
+            this.RadioNoite.Name = "RadioNoite";
+            this.RadioNoite.Size = new System.Drawing.Size(54, 19);
+            this.RadioNoite.TabIndex = 0;
+            this.RadioNoite.TabStop = true;
+            this.RadioNoite.Text = "Noite";
+            this.RadioNoite.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 277);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.GrupoPeriodo);
             this.Controls.Add(this.ConfirmarButton);
             this.Controls.Add(this.dateTime);
             this.Controls.Add(this.textBoxSobreNome);
@@ -168,8 +168,8 @@
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.LabelSobrenome_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.GrupoPeriodo.ResumeLayout(false);
+            this.GrupoPeriodo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,9 +184,9 @@
         private Label LabelData;
         private DateTimePicker dateTime;
         private Button ConfirmarButton;
-        private GroupBox groupBox1;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private RadioButton radioButton3;
+        private GroupBox GrupoPeriodo;
+        private RadioButton RadioTarde;
+        private RadioButton RadioNoite;
+        private RadioButton RadioManha;
     }
 }

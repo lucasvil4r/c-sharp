@@ -24,7 +24,18 @@
 
         private void ConfirmarButton_Click(object sender, EventArgs e)
         {
+            String sNome = textBoxNome.Text;
+            String sSobreNome = textBoxSobreNome.Text;
 
+            DateTime dDataMatricula = dateTime.Value;
+
+            bool bPeriodoManha = RadioManha.Checked;
+            bool bPeriodoTarde = RadioTarde.Checked;
+            bool bPeriodoNoite = RadioNoite.Checked;
+
+            MessageBox.Show("Nome: " + sNome + sSobreNome);
+            MessageBox.Show("Data Matricula: " + dDataMatricula);
+            MessageBox.Show("Periodo: " + bPeriodoManha);
         }
     }
 }
