@@ -39,7 +39,15 @@
             this.RadioManha = new System.Windows.Forms.RadioButton();
             this.RadioTarde = new System.Windows.Forms.RadioButton();
             this.RadioNoite = new System.Windows.Forms.RadioButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.comandosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.limparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gravarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GrupoPeriodo.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LabelNome
@@ -72,11 +80,13 @@
             // 
             // textBoxSobreNome
             // 
+            this.textBoxSobreNome.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.textBoxSobreNome.Location = new System.Drawing.Point(90, 73);
             this.textBoxSobreNome.Name = "textBoxSobreNome";
             this.textBoxSobreNome.PlaceholderText = "Digite Sobrenome";
             this.textBoxSobreNome.Size = new System.Drawing.Size(433, 23);
             this.textBoxSobreNome.TabIndex = 1;
+            this.textBoxSobreNome.TextChanged += new System.EventHandler(this.textBoxSobreNome_TextChanged);
             // 
             // LabelData
             // 
@@ -152,6 +162,60 @@
             this.RadioNoite.Text = "Noite";
             this.RadioNoite.UseVisualStyleBackColor = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.comandosToolStripMenuItem,
+            this.ajudaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(581, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "PrincipalMenuStrip";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // comandosToolStripMenuItem
+            // 
+            this.comandosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.limparToolStripMenuItem,
+            this.gravarToolStripMenuItem,
+            this.imprimirToolStripMenuItem,
+            this.sairToolStripMenuItem});
+            this.comandosToolStripMenuItem.Name = "comandosToolStripMenuItem";
+            this.comandosToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.comandosToolStripMenuItem.Text = "Comandos";
+            // 
+            // limparToolStripMenuItem
+            // 
+            this.limparToolStripMenuItem.Name = "limparToolStripMenuItem";
+            this.limparToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.limparToolStripMenuItem.Text = "Limpar";
+            // 
+            // gravarToolStripMenuItem
+            // 
+            this.gravarToolStripMenuItem.Name = "gravarToolStripMenuItem";
+            this.gravarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gravarToolStripMenuItem.Text = "Gravar";
+            // 
+            // imprimirToolStripMenuItem
+            // 
+            this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imprimirToolStripMenuItem.Text = "Imprimir";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // ajudaToolStripMenuItem
+            // 
+            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.ajudaToolStripMenuItem.Text = "Ajuda";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -165,11 +229,15 @@
             this.Controls.Add(this.LabelData);
             this.Controls.Add(this.LabelSobreNome);
             this.Controls.Add(this.LabelNome);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.LabelSobrenome_Load);
             this.GrupoPeriodo.ResumeLayout(false);
             this.GrupoPeriodo.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,5 +256,12 @@
         private RadioButton RadioTarde;
         private RadioButton RadioNoite;
         private RadioButton RadioManha;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem comandosToolStripMenuItem;
+        private ToolStripMenuItem limparToolStripMenuItem;
+        private ToolStripMenuItem gravarToolStripMenuItem;
+        private ToolStripMenuItem imprimirToolStripMenuItem;
+        private ToolStripMenuItem sairToolStripMenuItem;
+        private ToolStripMenuItem ajudaToolStripMenuItem;
     }
 }

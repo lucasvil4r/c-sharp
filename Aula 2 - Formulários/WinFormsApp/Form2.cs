@@ -37,5 +37,20 @@
             MessageBox.Show("Data Matricula: " + dDataMatricula);
             MessageBox.Show("Periodo: " + bPeriodoManha);
         }
+
+        private void textBoxSobreNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
