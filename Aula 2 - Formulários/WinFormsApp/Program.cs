@@ -12,7 +12,7 @@ namespace WinFormsApp
             // see https://aka.ms/applicationconfiguration.
             Application.EnableVisualStyles();
             ApplicationConfiguration.Initialize();
-            //Application.Run(new Form1());
+            Application.Run(new Form1());
             Application.Run(new Form2());
         }
     }
