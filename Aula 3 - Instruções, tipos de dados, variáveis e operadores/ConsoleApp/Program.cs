@@ -34,9 +34,5 @@ namespace Aula03
 
         public String nome = "Teste";
         String ExibirDados() => nome;
-
-        String CalcularPreco()
-        {
-        }
     }
 }
