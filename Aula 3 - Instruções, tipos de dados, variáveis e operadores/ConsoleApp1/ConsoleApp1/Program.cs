@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Globalization;
+
 namespace Aula03
 {
     class Program
@@ -24,7 +26,17 @@ namespace Aula03
             DateTime agora = DateTime.Now;
 
             //Boolean
-            bool = true;
+            bool pessoaFisica = true;
+
+            //Array
+            int[] numeros = new int[3];
+        }
+
+        public String nome = "Teste";
+        String ExibirDados() => nome;
+
+        String CalcularPreco()
+        {
         }
     }
 }
