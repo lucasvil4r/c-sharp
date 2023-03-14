@@ -10,19 +10,17 @@ namespace WinFormsApp
         private void Form1_Load(object sender, EventArgs e)
         {
             string sMensagem;
-            DayOfWeek dDayOfWeek;
-
-            dDayOfWeek = DateTime.Now.DayOfWeek;
+            DayOfWeek dDayOfWeek = DateTime.Now.DayOfWeek;
 
             switch (dDayOfWeek)
             {
-                case dDayOfWeek.Sunday:
+                case DayOfWeek.Sunday:
                     sMensagem = "Hoje é domingo";
                     break;
-                case dDayOfWeek.Friday:
+                case DayOfWeek.Friday:
                     sMensagem = "Hoje é Sexta-Feira";
                     break;
-                case dDayOfWeek.Monday:
+                case DayOfWeek.Monday:
                     sMensagem = "Hoje é Segunda-Feira";
                     break;
                 default:
