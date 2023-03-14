@@ -28,6 +28,8 @@ namespace WinFormsApp
                     break;
             }
 
+            MessageBox.Show(sMensagem);
+
             if ( DateTime.Now.Hour > 17 )
             {
                 sMensagem = "Boa noite";
@@ -35,13 +37,15 @@ namespace WinFormsApp
 
             else if ( DateTime.Now.Minute > 13 )
             {
-                sMensagem = "Bom tarde"; 
+                sMensagem = "Boa tarde"; 
             } 
 
             else
             {
                 sMensagem = "Bom dia";
             }
+
+            MessageBox.Show(sMensagem);
         }
     }
 }
