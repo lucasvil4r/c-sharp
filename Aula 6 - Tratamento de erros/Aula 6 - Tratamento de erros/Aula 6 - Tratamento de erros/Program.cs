@@ -58,5 +58,7 @@ internal class Program
         {
             Console.WriteLine("Erro generico");
         }
+        // Finally é executado sempre com erros ou sem erros 
+        finally { Console.WriteLine("Fim do programa"); }
     }
 }
