@@ -6,7 +6,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        //Exception01();
+        Exception01();
         Exception02();
     }
 
@@ -17,6 +17,12 @@ internal class Program
             decimal valorProduto = Convert.ToDecimal(Console.ReadLine());
             decimal quantidade = Convert.ToInt32 (Console.ReadLine());
             decimal total = valorProduto + quantidade;
+
+            if (valorProduto < 0 || quantidade < 0)
+            { 
+                //Lança uma exception manualmente
+                throw new ApplicationException("Número inserido menor que zero"); 
+            }
 
             Console.WriteLine(total);
         }
