@@ -6,34 +6,10 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Exception01();
-        Exception02();
+        Debug();
     }
 
-    static void Exception01()
-    {
-        try 
-        {
-            decimal valorProduto = Convert.ToDecimal(Console.ReadLine());
-            decimal quantidade = Convert.ToInt32 (Console.ReadLine());
-            decimal total = valorProduto + quantidade;
-
-            if (valorProduto < 0 || quantidade < 0)
-            { 
-                //Lança uma exception manualmente
-                throw new ApplicationException("Número inserido menor que zero"); 
-            }
-
-            Console.WriteLine(total);
-        }
-        //Variavel que é instanciada pelo SO automaticamente e retorna erro
-        // catch generico
-        catch
-        {
-            Console.WriteLine("Erro na entrada de dados, favor verificar");
-        }
-    }
-    static void Exception02()
+    static void Debug()
     {
         try
         {
