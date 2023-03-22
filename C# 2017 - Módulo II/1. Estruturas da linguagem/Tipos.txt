@@ -1,0 +1,17 @@
+Types
+
+- class
+- structure
+- interface
+- enumeration
+- delegate
+
+class: Classe será pai dos métodos que e propriedades.
+
+struct: pequena class, serve para armazenar variaveis e pequenos dados.
+
+enumeration: declara numeros enumerados
+
+interface: 
+
+delegate: crair uma var executando um método isoladamente.

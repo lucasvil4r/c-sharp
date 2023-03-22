@@ -1,0 +1,8 @@
+- Estrutura executavel
+
+Assembly = arquivos dll
+	->Namespace
+		->class = classe dinamica, usa mais memoria
+			->struct = classe static, menos memoria
+				->enum
+					->delegate
