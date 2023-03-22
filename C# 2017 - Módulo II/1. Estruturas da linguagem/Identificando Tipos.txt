@@ -2,7 +2,7 @@
 
 Assembly = arquivos dll
 	->Namespace
-		->class = classe dinamica, usa mais memoria
-			->struct = classe static, menos memoria
+		->class = classe dinamica, é refe
+			->struct = 
 				->enum
 					->delegate
