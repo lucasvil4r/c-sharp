@@ -33,7 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FormaPagamento.cs" />
+    <Compile Include="Pedidos.cs" />
+    <Compile Include="Produto.cs" />
     <None Include="App.config" />
+    <Compile Include="Clientes.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
