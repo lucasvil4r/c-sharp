@@ -14,8 +14,4 @@
     <Folder Include="Views\Cliente\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\LojaNet.Models.csproj" />
-  </ItemGroup>
-
 </Project>
