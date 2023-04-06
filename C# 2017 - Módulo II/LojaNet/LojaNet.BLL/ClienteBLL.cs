@@ -1,4 +1,5 @@
-﻿using LojaNet.Models;
+﻿using LojaNet.DAL;
+using LojaNet.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,8 +44,11 @@ namespace LojaNet.BLL
 
             if (string.IsNullOrEmpty(cliente.Id))
             {
-                throw new ApplicationException("O nome deve ser informado");
+                cliente.Id = Guid .NewGuid().ToString();
             }
+
+            var dal = new ClienteDAL();
+            dal.Set(cliente);
         }
     }
 }
