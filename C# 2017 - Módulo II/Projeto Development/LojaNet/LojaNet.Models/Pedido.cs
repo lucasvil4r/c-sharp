@@ -1,14 +1,15 @@
-﻿using LojaNet.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace LojaNet.Models
 {
     public class Pedido
     {
+        public Pedido() {
+            this.Items = new List<Item>();
+        }
+
         public int Id { get; set; }
         public DateTime Data { get; set; }
         public Cliente Cliente { get; set; }

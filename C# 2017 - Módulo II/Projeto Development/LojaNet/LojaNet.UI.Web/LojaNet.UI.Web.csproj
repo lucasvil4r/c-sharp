@@ -10,4 +10,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="7.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LojaNet.Models\LojaNet.Models.csproj" />
+  </ItemGroup>
+
 </Project>

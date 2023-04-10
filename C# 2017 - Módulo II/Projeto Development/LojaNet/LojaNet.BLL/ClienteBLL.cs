@@ -1,51 +1,77 @@
-﻿using LojaNet.DAL;
-using LojaNet.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using LojaNet.Models;
+using LojaNet.DAL;
+
+
 
 namespace LojaNet.BLL
 {
-	public class ClienteBLL : InterfaceClienteDados
-	{
-        public void Change(Cliente cliente)
+    //Bussinnes Logic Layer
+    public class ClienteBLL : IClienteDados
+    {
+        private IClienteDados dal;
+
+        public ClienteBLL(IClienteDados clienteDados)
         {
-            throw new NotImplementedException();
+            this.dal = clienteDados;
         }
 
-        public void Delete(Cliente cliente)
+
+        public void Alterar(Cliente cliente)
         {
-            throw new NotImplementedException();
+            Validar(cliente);
+            if (string.IsNullOrEmpty(cliente.Id))
+            {
+                throw new Exception("O id deve ser informado");
+            }
+            dal.Alterar(cliente);
         }
 
-        public List<Cliente> GetAll()
+        public void Excluir(string Id)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(Id))
+            {
+                throw new Exception("O id deve ser informado");
+            }
+            dal.Excluir(Id);
         }
 
-        public Cliente GetByEmail(string email)
+        public void Incluir(Cliente cliente)
         {
-            throw new NotImplementedException();
+            Validar(cliente);
+            if (string.IsNullOrEmpty(cliente.Id))
+            {
+                cliente.Id = Guid.NewGuid().ToString();
+            }
+            dal.Incluir(cliente);
         }
 
-        public Cliente GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Set(Cliente cliente)
+        private static void Validar(Cliente cliente)
         {
             if (string.IsNullOrEmpty(cliente.Nome))
             {
                 throw new ApplicationException("O nome deve ser informado");
             }
+        }
 
-            if (string.IsNullOrEmpty(cliente.Id))
-            {
-                cliente.Id = Guid .NewGuid().ToString();
-            }
+        public Cliente ObterPorEmail(string email)
+        {
+            return dal.ObterPorEmail(email);
+        }
 
-            var dal = new ClienteDAL();
-            dal.Set(cliente);
+        public Cliente ObterPorId(string id)
+        {
+            return dal.ObterPorId(id);
+        }
+
+        public List<Cliente> ObterTodos()
+        {
+            var lista = dal.ObterTodos();
+            return lista;
         }
     }
 }
