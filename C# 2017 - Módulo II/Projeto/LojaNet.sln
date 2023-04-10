@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNet.Models", "LojaNet.Models\LojaNet.Models.csproj", "{55E97CA9-44AA-401D-83FB-5D2074E8705A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNet.DAL", "LojaNet.DAL\LojaNet.DAL.csproj", "{3E8C2CFD-A7F1-413B-8FDF-6B719E46B020}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNet.BLL", "LojaNet.BLL\LojaNet.BLL.csproj", "{BBD80756-92E9-4FE3-9968-3213440F1016}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNet.UI.Web", "LojaNet.UI.Web\LojaNet.UI.Web.csproj", "{B81F9FBA-5EC3-404F-896E-1E27E6C73032}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNet.Services", "LojaNet.Services\LojaNet.Services.csproj", "{14028476-875F-4375-B68D-90548CF523EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNet.Test", "LojaNet.Test\LojaNet.Test.csproj", "{EE31E5AF-407C-4BBB-98B5-C49DFEEF876C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55E97CA9-44AA-401D-83FB-5D2074E8705A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E97CA9-44AA-401D-83FB-5D2074E8705A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E97CA9-44AA-401D-83FB-5D2074E8705A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E97CA9-44AA-401D-83FB-5D2074E8705A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E8C2CFD-A7F1-413B-8FDF-6B719E46B020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E8C2CFD-A7F1-413B-8FDF-6B719E46B020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E8C2CFD-A7F1-413B-8FDF-6B719E46B020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E8C2CFD-A7F1-413B-8FDF-6B719E46B020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBD80756-92E9-4FE3-9968-3213440F1016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBD80756-92E9-4FE3-9968-3213440F1016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBD80756-92E9-4FE3-9968-3213440F1016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBD80756-92E9-4FE3-9968-3213440F1016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B81F9FBA-5EC3-404F-896E-1E27E6C73032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B81F9FBA-5EC3-404F-896E-1E27E6C73032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B81F9FBA-5EC3-404F-896E-1E27E6C73032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B81F9FBA-5EC3-404F-896E-1E27E6C73032}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14028476-875F-4375-B68D-90548CF523EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14028476-875F-4375-B68D-90548CF523EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14028476-875F-4375-B68D-90548CF523EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14028476-875F-4375-B68D-90548CF523EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE31E5AF-407C-4BBB-98B5-C49DFEEF876C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE31E5AF-407C-4BBB-98B5-C49DFEEF876C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE31E5AF-407C-4BBB-98B5-C49DFEEF876C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE31E5AF-407C-4BBB-98B5-C49DFEEF876C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
