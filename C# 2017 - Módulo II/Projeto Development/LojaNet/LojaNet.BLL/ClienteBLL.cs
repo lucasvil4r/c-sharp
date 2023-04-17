@@ -20,8 +20,11 @@ namespace LojaNet.BLL
             this.dal = clienteDados;
         }
 
+		public ClienteBLL()
+		{
+		}
 
-        public void Alterar(Cliente cliente)
+		public void Alterar(Cliente cliente)
         {
             Validar(cliente);
             if (string.IsNullOrEmpty(cliente.Id))
@@ -42,12 +45,14 @@ namespace LojaNet.BLL
 
         public void Incluir(Cliente cliente)
         {
+            /*
             Validar(cliente);
             if (string.IsNullOrEmpty(cliente.Id))
             {
                 cliente.Id = Guid.NewGuid().ToString();
             }
             dal.Incluir(cliente);
+            */
         }
 
         private static void Validar(Cliente cliente)

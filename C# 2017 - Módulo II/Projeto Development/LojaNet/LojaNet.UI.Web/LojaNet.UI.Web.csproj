@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LojaNet.BLL\LojaNet.BLL.csproj" />
     <ProjectReference Include="..\LojaNet.Models\LojaNet.Models.csproj" />
   </ItemGroup>
 
