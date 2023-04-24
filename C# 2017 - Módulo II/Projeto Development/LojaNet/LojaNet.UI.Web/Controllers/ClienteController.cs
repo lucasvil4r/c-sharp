@@ -13,7 +13,7 @@ namespace LojaNet.UI.Web.Controllers
 		//
 		public ClienteController()
 		{
-			bll = AppContainer.ObterClienteBLL();
+			//bll = AppContainer.ObterClienteBLL();
 		}
 
 		//
