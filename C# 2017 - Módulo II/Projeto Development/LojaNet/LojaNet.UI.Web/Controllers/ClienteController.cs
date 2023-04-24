@@ -13,7 +13,7 @@ namespace LojaNet.UI.Web.Controllers
 		//
 		public ClienteController()
 		{
-			//bll = AppContainer.ObterClienteBLL();
+			bll = AppContainer.ObterClienteBLL();
 		}
 
 		//
@@ -73,8 +73,6 @@ namespace LojaNet.UI.Web.Controllers
 			}
 		}
 
-
-
 		//
 		// Detalhes
 		//
@@ -83,7 +81,6 @@ namespace LojaNet.UI.Web.Controllers
 			var cliente = bll.ObterPorId(id);
 			return View(cliente);
 		}
-
 
 		//
 		// Incluir

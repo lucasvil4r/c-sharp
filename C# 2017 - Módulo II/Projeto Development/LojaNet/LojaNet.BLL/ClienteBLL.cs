@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 using LojaNet.Models;
 using LojaNet.DAL;
 
-
-
 namespace LojaNet.BLL
 {
 	//Bussinnes Logic Layer
