@@ -24,9 +24,6 @@ namespace LojaNet.Test
 
             var produto = dal.ObterPorId(p.Id);
 
-
-
-
             Assert.IsTrue(produto != null, "Erro na inclusão");
         }
 
@@ -45,10 +42,6 @@ namespace LojaNet.Test
             }
 
             Assert.IsTrue(lista.Count > 0, "A lista não pode ser vazia");
-
         }
-
-    
-    
     }
 }

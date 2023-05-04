@@ -7,7 +7,6 @@ using LojaNet.DAL;
 
 namespace LojaNet.Test
 {
-  
     [TestClass]
     public class PedidoUnitTest
     {
@@ -36,13 +35,8 @@ namespace LojaNet.Test
 
             pedido.Items.Add(item);
 
-
             var dal = new PedidoDAL();
             dal.Incluir(pedido);
-
-
         }
-
-
     }
 }
