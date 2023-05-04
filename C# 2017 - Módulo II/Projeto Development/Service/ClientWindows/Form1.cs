@@ -24,16 +24,6 @@ namespace ClientWindows
             var produto = wcf.PromocaoDoDia();
 
             MessageBox.Show(produto.Nome + " " + produto.Preco.ToString("c"));
-
-
-            //int total = wcf .Somar(10, 20);
-
-            //MessageBox.Show(total.ToString());
-
-
-            //string msg = wcf.Mensagem();
-            // MessageBox.Show(msg);
-
         }
     }
 }

@@ -17,9 +17,6 @@ namespace ExemploServico
         int Somar(int x, int y);
 
         [OperationContract]
-        Produto PromocaoDoDia();
-
-
-     
+        Produto PromocaoDoDia();   
     }
 }
