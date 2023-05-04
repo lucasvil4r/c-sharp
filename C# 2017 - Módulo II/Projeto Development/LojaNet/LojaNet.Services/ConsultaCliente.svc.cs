@@ -24,22 +24,14 @@ namespace LojaNet.Services
             var dal = new ClienteDAL();
             var bll = new ClienteBLL(dal);
             var cliente = bll.ObterPorEmail(email);
-            if (cliente == null)
-            {
+
+            if (cliente == null) {
                 return null;
             }
-            else
-            {
-                clienteInfo = new ClienteInfo()
-                {
-                    Nome = cliente.Nome,
-                    Email = cliente.Email,
-                    Telefone = cliente.Telefone
-                };
+            else {
+                clienteInfo = new ClienteInfo() {Nome = cliente.Nome, Email = cliente.Email, Telefone = cliente.Telefone };
             }
             return clienteInfo;
-
-
         }
     }
 }
