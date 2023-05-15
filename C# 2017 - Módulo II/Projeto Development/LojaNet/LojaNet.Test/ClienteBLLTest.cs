@@ -8,7 +8,6 @@ using LojaNet.DAL;
 
 namespace LojaNet.Test
 {
-
     public class ClienteDALMock : IClienteDados
     {
         public void Alterar(Cliente cliente)
@@ -42,8 +41,6 @@ namespace LojaNet.Test
         }
     }
 
-
-
     [TestClass]
     public class ClienteBLLTest
     {
@@ -72,10 +69,7 @@ namespace LojaNet.Test
             }
 
             Assert.IsTrue(ok, "Deveria ter disparado um Exception");
-
-
         }
-
 
         [TestMethod]
         public void IncluirNomeNullTest()
@@ -100,9 +94,6 @@ namespace LojaNet.Test
             }
 
             Assert.IsTrue(ok, "Deveria ter disparado um Exception");
-
-            
         }
-
     }
 }

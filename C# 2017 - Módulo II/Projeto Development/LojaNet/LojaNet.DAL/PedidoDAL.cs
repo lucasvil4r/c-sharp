@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LojaNet.Models;
+using System.Data.SqlClient;
 using System.Data;
 
 namespace LojaNet.DAL
@@ -12,7 +13,6 @@ namespace LojaNet.DAL
     {
         public void Alterar(Pedido pedido)
         {
-            /*
             var pedidoOriginal = ObterPorId(pedido.Id);
             if (pedidoOriginal == null)
             {
@@ -113,17 +113,15 @@ namespace LojaNet.DAL
             {
                 cn.Close();
             }
-            */
         }
 
         public void Excluir(int pedidoId)
         {
-            //DbHelper.ExecuteNonQuery("PedidoExcluir", "@Id", pedidoId);
+            DbHelper.ExecuteNonQuery("PedidoExcluir", "@Id", pedidoId);
         }
 
         public void Incluir(Pedido pedido)
         {
-            /*
             var cn = new SqlConnection(DbHelper.conexao);
 
             var cmd1 = new SqlCommand("PedidoIncluir");
@@ -207,7 +205,6 @@ namespace LojaNet.DAL
                 }
             }
             return pedido;
-            */
         }
 
         private static Pedido ObterPedido(IDataReader reader)
@@ -230,14 +227,17 @@ namespace LojaNet.DAL
             };
         }
 
-		public List<Pedido> ObterTodos()
-		{
-			throw new NotImplementedException();
-		}
-
-		public Pedido ObterPorId(int id)
-		{
-			throw new NotImplementedException();
-		}
-	}
+        public List<Pedido> ObterTodos()
+        {
+            var lista = new List<Pedido>();
+            using (var reader = DbHelper.ExecuteReader("PedidoListar"))
+            {
+                while (reader.Read())
+                {
+                    lista.Add(ObterPedido(reader));
+                }
+            }
+            return lista;
+        }
+    }
 }
