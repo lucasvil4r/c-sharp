@@ -1,122 +1,125 @@
 ﻿using System;
+using System.Web.Mvc;
 using LojaNet.Models;
-using Microsoft.AspNetCore.Mvc;
 
 namespace LojaNet.UI.Web.Controllers
 {
-	public class ClienteController : Controller
-	{
-		private IClienteDados bll;
+    public class ClienteController : Controller
+    {
+        private IClienteDados bll;
 
-		//
-		// Construtor
-		//
-		public ClienteController()
-		{
-			//bll = AppContainer.ObterClienteBLL();
-		}
+        //
+        // Construtor
+        //
+        public ClienteController()
+        {
+            bll = AppContainer.ObterClienteBLL();
+        }
 
-		//
-		// Excluir
-		//
-		public ActionResult Excluir(string id)
-		{
-			var cliente = bll.ObterPorId(id);
-			return View(cliente);
-		}
+        //
+        // Excluir
+        //
+        public ActionResult Excluir(string id)
+        {
+            var cliente = bll.ObterPorId(id);
+            return View(cliente);
+        }
 
-		//
-		// Excluir (post)
-		//
-		[HttpPost]
-		public ActionResult Excluir(string id, FormCollection form)
-		{
-			try
-			{
-				bll.Excluir(id);
-				return RedirectToAction("Index");
-			}
-			catch (Exception ex)
-			{
-				ModelState.AddModelError(string.Empty, ex.Message);
-				var cliente = bll.ObterPorId(id);
-				return View(cliente);
-			}
+        //
+        // Excluir (post)
+        //
+        [HttpPost]
+        public ActionResult Excluir(string id, FormCollection form)
+        {
+            try
+            {
+                bll.Excluir(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, ex.Message);
+                var cliente = bll.ObterPorId(id);
+                return View(cliente);
+            }
 
-		}
+        }
 
-		//
-		// Alterar
-		//
-		public ActionResult Alterar(string id)
-		{
-			var cliente = bll.ObterPorId(id);
-			return View(cliente);
-		}
+        //
+        // Alterar
+        //
+        public ActionResult Alterar(string id)
+        {
+            var cliente = bll.ObterPorId(id);
+            return View(cliente);
+        }
 
-		//
-		// Alterar (post)
-		//
-		[HttpPost]
-		public ActionResult Alterar(Cliente cliente)
-		{
-			try
-			{
+        //
+        // Alterar (post)
+        //
+        [HttpPost]
+        public ActionResult Alterar(Cliente cliente)
+        {
+            try
+            {
 
-				bll.Alterar(cliente);
-				return RedirectToAction("Index");
-			}
-			catch (Exception ex)
-			{
-				ModelState.AddModelError(string.Empty, ex.Message);
-				return View(cliente);
-			}
-		}
+                bll.Alterar(cliente);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, ex.Message);
+                return View(cliente);
+            }
+        }
 
-		//
-		// Detalhes
-		//
-		public ActionResult Detalhes(string id)
-		{
-			var cliente = bll.ObterPorId(id);
-			return View(cliente);
-		}
 
-		//
-		// Incluir
-		//
-		public ActionResult Incluir()
-		{
-			var cli = new Cliente();
-			return View(cli);
-		}
 
-		//
-		// Incluir  (post)
-		//
-		[HttpPost]
-		public ActionResult Incluir(Cliente cliente)
-		{
-			try
-			{
+        //
+        // Detalhes
+        //
+        public ActionResult Detalhes(string id)
+        {
+            var cliente = bll.ObterPorId(id);
+            return View(cliente);
+        }
 
-				bll.Incluir(cliente);
-				return RedirectToAction("Index");
-			}
-			catch (Exception ex)
-			{
-				ModelState.AddModelError(string.Empty, ex.Message);
-				return View(cliente);
-			}
-		}
 
-		//
-		// Index
-		//
-		public ActionResult Index()
-		{
-			var lista = bll.ObterTodos();
-			return View(lista);
-		}
-	}
+        //
+        // Incluir
+        //
+        public ActionResult Incluir()
+        {
+            var cli = new Cliente();
+            return View(cli);
+        }
+
+        //
+        // Incluir  (post)
+        //
+        [HttpPost]
+        public ActionResult Incluir(Cliente cliente)
+        {
+            try
+            {
+                
+                bll.Incluir(cliente);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, ex.Message);
+                return View(cliente);
+            }
+        }
+
+        //
+        // Index
+        //
+        public ActionResult Index()
+        {
+            var lista = bll.ObterTodos();
+            return View(lista);
+        }
+    }
 }
