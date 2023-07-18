@@ -6,69 +6,72 @@ using System.Threading.Tasks;
 using LojaNet.Models;
 using LojaNet.DAL;
 
+
+
 namespace LojaNet.BLL
 {
-	//Bussinnes Logic Layer
-	public class ClienteBLL : IClienteDados
-	{
-		private IClienteDados dal;
+    //Bussinnes Logic Layer
+    public class ClienteBLL : IClienteDados
+    {
+        private IClienteDados dal;
 
-		public ClienteBLL(IClienteDados clienteDados)
-		{
-			this.dal = clienteDados;
-		}
+        public ClienteBLL(IClienteDados clienteDados)
+        {
+            this.dal = clienteDados;
+        }
 
-		public void Alterar(Cliente cliente)
-		{
-			Validar(cliente);
-			if (string.IsNullOrEmpty(cliente.Id))
-			{
-				throw new Exception("O id deve ser informado");
-			}
-			dal.Alterar(cliente);
-		}
 
-		public void Excluir(string Id)
-		{
-			if (string.IsNullOrEmpty(Id))
-			{
-				throw new Exception("O id deve ser informado");
-			}
-			dal.Excluir(Id);
-		}
+        public void Alterar(Cliente cliente)
+        {
+            Validar(cliente);
+            if (string.IsNullOrEmpty(cliente.Id))
+            {
+                throw new Exception("O id deve ser informado");
+            }
+            dal.Alterar(cliente);
+        }
 
-		public void Incluir(Cliente cliente)
-		{
-			Validar(cliente);
-			if (string.IsNullOrEmpty(cliente.Id))
-			{
-				cliente.Id = Guid.NewGuid().ToString();
-			}
-			dal.Incluir(cliente);
-		}
+        public void Excluir(string Id)
+        {
+            if (string.IsNullOrEmpty(Id))
+            {
+                throw new Exception("O id deve ser informado");
+            }
+            dal.Excluir(Id);
+        }
 
-		private static void Validar(Cliente cliente)
-		{
-			if (string.IsNullOrEmpty(cliente.Nome))
-			{
-				throw new ApplicationException("O nome deve ser informado");
-			}
-		}
+        public void Incluir(Cliente cliente)
+        {
+            Validar(cliente);
+            if (string.IsNullOrEmpty(cliente.Id))
+            {
+                cliente.Id = Guid.NewGuid().ToString();
+            }
+            dal.Incluir(cliente);
+        }
 
-		public Cliente ObterPorEmail(string email)
-		{
-			return dal.ObterPorEmail(email);
-		}
+        private static void Validar(Cliente cliente)
+        {
+            if (string.IsNullOrEmpty(cliente.Nome))
+            {
+                throw new ApplicationException("O nome deve ser informado");
+            }
+        }
 
-		public Cliente ObterPorId(string id)
-		{
-			return dal.ObterPorId(id);
-		}
+        public Cliente ObterPorEmail(string email)
+        {
+            return dal.ObterPorEmail(email);
+        }
 
-		public List<Cliente> ObterTodos()
-		{
-			var lista = dal.ObterTodos();
-			return lista;
-		}
-	}
+        public Cliente ObterPorId(string id)
+        {
+            return dal.ObterPorId(id);
+        }
+
+        public List<Cliente> ObterTodos()
+        {
+            var lista = dal.ObterTodos();
+            return lista;
+        }
+    }
 }
